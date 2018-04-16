@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sheet.xsl"?>
+
+<Information>
+	<Person>
+		<Name> Shubham </Name>
+		<Phone> 987</Phone>
+		<Age> 20 </Age>
+	</Person>
+	<Person>
+		<Name> Praniti </Name>
+		<Phone> 678 </Phone>
+		<Age> 19 </Age>
+	</Person>
+	<Person>
+		<Name> Kshitija </Name>
+		<Phone> 968</Phone>
+		<Age> 21 </Age>
+	</Person>
+</Information>

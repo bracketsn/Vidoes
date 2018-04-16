@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/anjularjs/1.6.4/angular.min.js"></script>
+	<body>
+		<div ng-app="myApp" ng-controller="myCntr">
+			<p> LOGIN </p>
+			<br>
+			Username : <input type="text" ng-model="username">
+			<br> <br>
+			Password : <input type="password" ng-model="password">
+			<br> <br>
+			<button ng-click="login()">Login</button>
+			<br> <br>
+			<p>name- {{name}}</p>
+			
+	 	</div>
+
+	 	<script type="text/javascript">
+	 		var app = angular.module("myApp", []);
+	 		app.controller("myCntr", function($scope)
+	 		{
+	 			$scope.login = function()
+	 			{
+	 				if ($scope.username == "admin" && $scope.password == "admin")
+	 				{
+	 					$scope.output = "Successful";
+	 				}
+	 				else
+	 				{
+	 					$scope.output = "Unsuccesful";
+	 				}
+	 			}
+	 		});
+	 		//<p ng-module="name">...</p>
+	 	</script>
+	 </body>
+</html>
+

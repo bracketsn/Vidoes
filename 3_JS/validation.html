@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head> 
+		<title> Validation </title>
+
+		<script type="text/javascript">
+			function validate() 
+			{
+				var name = document.myForm.fname.value;      //check for not empty and all letters
+				var name_pattern = /^([A-Za-z]{2,20})$/;
+				var email = document.myForm.email.value;     //check with pattern
+				var email_pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;    
+				var phno = document.myForm.phno.value;       //check for all digits and lenght = 10
+				var dob = document.myForm.dob.value;         //check with pattern
+				var dob_pattern = /^(0?[1-9]|1[012])+[\/\-]+(0?[1-9]|[12][0-9]|3[01])+[\/\-]+\d{4}$/;     
+				var pass1 = document.myForm.p1.value;        //password size cannot be less than 6
+				var pass2 = document.myForm.p2.value;        //check if pass1 == pass2
+
+				if (name == "") {
+					alert ("Name field is empty");
+					document.myForm.fname.focus();
+					return false;
+				}
+
+				if (!name_pattern.test(name)) {
+					alert ("Name can only contain letters");
+					document.myForm.fname.focus();
+					return false;
+				}  
+
+				if (!email_pattern.test(document.myForm.email.value)) {
+					alert("Email not in proper format");
+					return false;
+				}
+
+				if (phno.length != 10 || isNaN(phno)) {
+					alert ("Invalid Phone Number");
+					return false;
+				}
+
+				if (!dob_pattern.test(dob)) {
+					alert ("Enter valid date of birth");
+					return false;
+				} 
+
+				if (pass1=="" || pass1.length<6) {
+					alert ("Insufficiently long password");
+					document.myForm.p1.focus();
+					return false;
+				}
+
+				if (pass1 != pass2) {
+					alert("Re-entered passwords dont match");
+					document.myForm.p2.focus();
+					return false;
+				} 
+
+				return true;
+
+			}
+		</script>
+
+	</head>
+	<body>
+		<center>
+		<form name="myForm" onsubmit="return validate();" method="post">
+			<table>
+				<tr>
+					<td> Name : </td>
+					<td> <input type="text" name="fname"> </td>
+				</tr>
+				<tr>
+					<td> Email : </td>
+					<td> <input type="text" name="email"> </td>
+				</tr>
+				<tr>
+					<td> Phone Number : </td>
+					<td> <input type="text" name="phno"> </td>
+				</tr>
+				<tr>
+					<td> Date of birth : </td>
+					<td> <input type="text" name="dob"> </td>
+				</tr>
+				<tr>
+					<td> Password : </td>
+					<td> <input type="password" name="p1"> </td>
+				</tr>
+				<tr>
+					<td> Re-enter Password : </td>
+					<td> <input type="password" name="p2"> </td>
+				</tr>
+				<tr>
+					<td rowspan="2"> Gender : </td>
+					<td> <input type="radio"> Female </td>
+				</tr>
+				<tr>
+					<td> <input type="radio"> Male </td>
+				</tr>
+				<tr>
+					<td> Occupation : </td>
+					<td> <select style="width: 130px;">
+						<option> Teacher</option>
+						<option> Student</option> </select> </td>
+				</tr> 
+			</table>
+			<input type="submit" value="Done">
+		</form>
+		</center>
+	</body>
+</html>

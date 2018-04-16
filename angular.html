@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myapp" ng-controller="myctrl">
+ 
+<p>Login validation:</p>
+Username : <input type="text" ng-model="username" ><br><br>
+
+Password : <input type="password" ng-model="password" ><br><br>
+
+<button ng-click="login()" >Login</button><br>
+<p>name- {{name}}</p>
+
+</div>
+
+
+<script type="text/javascript">
+	
+var app=angular.module("myapp",[]);
+
+app.controller("myctrl",function($scope){
+
+	$scope.login=function()
+	{
+		if($scope.username=="admin" && $scope.password=="admin")
+		{
+			$scope.name="success in login";
+		}
+		else{$scope.name="failure";}
+	}
+});
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+#madrid, #barca, #seville	{
+	border: 3px solid black;
+	padding: 1px;
+}
+
+.cities	{
+	font-size: 25px;
+	color: DodgerBlue;
+}
+
+h1	{
+	font-size: 30px;
+}
+.login	{
+	margin-left:10px;
+	font-size: 20px;
+	font-family:MS Comic Sans;
+}
+#log	{
+	margin-left:1150px;
+	font-size:20px;
+	margin-top:-20px;
+	position:absolute;
+}
+#book:link	{
+	text-align:center;
+	margin-left: 550px;
+	font-size:20px;
+	color:black;
+}
+
+#book:hover	{
+	text-align:center;
+	margin-left: 550px;
+	font-size:25px;
+	color:SlateBlue;
+}
+
+#book:visited	{
+	text-align:center;
+	margin-left: 550px;
+	font-size:20px;
+	color:Green;
+}
+
+.header	{
+	height:30px;
+	background-color:rgb(150,100,100);
+	margin: 3px;
+}
+
+footer	{
+	background-color:rgb(150,100,100);
+}
+
+#bookings	{
+	background-color:rgb(220,220,200);
+	text-align:center;
+	margin-top:20px;
+	border: 1px solid black;
+	height:400px;
+	width:500px;
+	background: url("spain.jpg") no-repeat center;
+	padding: 30px;
+	margin-left:350px;
+	margin-right:300px;
+	background-size: cover;
+	font-size:20px;
+}
